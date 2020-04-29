@@ -149,7 +149,7 @@ use std::hash::{Hash, Hasher};
 /// To use, create one using `Ustr::from` or the `ustr` function. You can freely
 /// copy, destroy or send Ustrs to other threads: the underlying string is
 /// always valid in memory (and is never destroyed).
-#[derive(Copy, Clone, PartialEq, PartialOrd)]
+#[derive(Copy, Clone, PartialEq, PartialOrd, Ord)]
 #[repr(transparent)]
 pub struct Ustr {
     char_ptr: *const u8,
